@@ -9,8 +9,11 @@ def main():
 
     contact = Contact(name, email, phone)
 
-    print("\nContact Created:")
-    print(contact.display_contact())
+    if contact.validate_email():
+     print("\nContact Created:")
+     print(contact.display_contact())
+    else:
+        print("Invalid email format. Contact not created. ")
 
 if __name__ == "__main__":
     main()
