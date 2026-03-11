@@ -1,4 +1,5 @@
 from contact import Contact
+from file_manager import save_contact
 
 def main():
     print("Contact Manager Application")
@@ -10,8 +11,9 @@ def main():
     contact = Contact(name, email, phone)
 
     if contact.validate_email():
-     print("\nContact Created:")
-     print(contact.display_contact())
+       save_contact(contact)
+       print("\nContact saved succesfully.")
+       print(contact.display_contact())
     else:
         print("Invalid email format. Contact not created. ")
 
