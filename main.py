@@ -1,3 +1,4 @@
+from tabulate import tabulate
 from contact import Contact
 from file_manager import save_contact, load_contacts
 
