@@ -1,11 +1,20 @@
+# Import tabulate library to display contacts in a table
 from tabulate import tabulate
+
+# Import the Contact class
 from contact import Contact
+
+#Import functions to save and load contacts
 from file_manager import save_contact, load_contacts
 
+
+# Main function that runs the program 
 def main():
+
+    # Program menu loop
     while True:
         print("\nContact Manager")
-        print("1. Add Contact")
+        print("1. Add Contact")   
         print("2. View Contacts")
         print("3. Search Contact")
         print("4. Exit")
