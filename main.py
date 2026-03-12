@@ -7,7 +7,8 @@ def main():
         print("\nContact Manager")
         print("1. Add Contact")
         print("2. View Contacts")
-        print("3. Exit")
+        print("3. Search Contact")
+        print("4. Exit")
 
         choice = input("Choose an option: ")
 
@@ -40,6 +41,20 @@ def main():
 
         
         elif choice == "3":
+
+            search_name = input("Enter name to search: ").lower()
+            contacts = load_contacts()
+
+            found = False
+
+            for c in contacts:
+                if search_name in c[0].lower():
+                    print(f"Name: {c[0]}, Email: {c[1]}, Phone: {c[2]}")
+                    found = True
+            if not found:
+                print("No matching contact found. ")
+
+        elif choice == "4":
             print("Exiting program. ")
             break
         
